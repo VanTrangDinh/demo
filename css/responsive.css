@@ -1,0 +1,296 @@
+/* ==========================================================================
+   RESPONSIVE MEDIA QUERIES (hat-xop-dao-dong-landing)
+   ========================================================================== */
+
+/* 1200px and under - Desktop Comfort Area */
+@media (max-width: 1200px) {
+  :root {
+    --section-padding: 80px 0;
+  }
+  .container {
+    padding: 0 32px;
+  }
+}
+
+/* 992px and under - Tablet & Small Screen Layouts */
+@media (max-width: 992px) {
+  :root {
+    --section-padding: 70px 0;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  /* Header & Navigation */
+  .nav-menu {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background: var(--bg-card);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px;
+    gap: 24px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+    transition: var(--transition-smooth);
+    overflow-y: auto;
+    z-index: 999;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+    z-index: 1001;
+  }
+
+  .mobile-nav-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .mobile-nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile-nav-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  .header-cta {
+    margin-right: 20px;
+  }
+
+  /* Hero Section */
+  .hero {
+    padding-top: 100px;
+    min-height: auto;
+    padding-bottom: 80px;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    text-align: center;
+  }
+
+  .hero-badge {
+    margin: 0 auto 20px auto;
+  }
+
+  .hero-title {
+    font-size: 2.8rem;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-trust-metrics {
+    justify-content: center;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .hero-visual {
+    margin-top: 20px;
+  }
+
+  .floating-card-1 {
+    left: 10px;
+  }
+  .floating-card-2 {
+    right: 10px;
+  }
+
+  /* Product Intro */
+  .product-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .image-stack {
+    height: 380px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .image-stack-large {
+    height: 300px;
+  }
+
+  .image-stack-small {
+    height: 200px;
+  }
+
+  /* Advantages Grid */
+  .advantages-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  /* Gallery Grid */
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  /* Why Choose Us Grid */
+  .why-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  /* Timeline Process Grid */
+  .timeline {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .timeline::before {
+    display: none; /* Hide horizontal line */
+  }
+
+  .timeline-step {
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    gap: 20px;
+  }
+
+  /* Add a vertical indicator line for vertical timeline */
+  .timeline-step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 70px;
+    left: 35px;
+    width: 2px;
+    height: calc(100% - 30px);
+    background-color: var(--border-color);
+  }
+
+  .timeline-num {
+    margin: 0;
+    flex-shrink: 0;
+  }
+
+  .timeline-title {
+    margin-top: 10px;
+  }
+
+  .timeline-desc {
+    padding: 0;
+  }
+
+  /* Contact Grid */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  /* Technical Specs Table wrapper */
+  .specs-wrapper {
+    padding: 32px;
+    overflow-x: auto;
+  }
+
+  .specs-table {
+    min-width: 600px;
+  }
+
+  /* Footer */
+  .footer-top {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+}
+
+/* 768px and under - Mobile Devices */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  .header-cta .btn-hotline {
+    display: none; /* Hide large hotline button to save space */
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-desc {
+    font-size: 1rem;
+  }
+
+  .hero-trust-metrics {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .metric-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 12px;
+  }
+
+  .metric-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .advantages-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .form-box {
+    padding: 32px 24px;
+  }
+
+  .contact-info-card {
+    padding: 40px 24px;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* 480px and under - Very Small Screens */
+@media (max-width: 480px) {
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .floating-card {
+    display: none; /* Hide floating cards to avoid cluttering small screens */
+  }
+}
